@@ -1,7 +1,13 @@
 import type { NextConfig } from "next";
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    unoptimized: true,
+  },
+  devIndicators: false,
 };
 
 export default nextConfig;
+
+initOpenNextCloudflareForDev();
